@@ -75,3 +75,18 @@ body {
     50% { opacity: 1; }
     100% { opacity: 0.3; }
 }
+/* STILE FOOTER */
+.site-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(244, 244, 240, 0.4); /* Un grigio/bianco molto sfumato e discreto */
+    font-weight: 300;
+}
