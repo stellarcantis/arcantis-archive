@@ -90,3 +90,75 @@ body {
     color: rgba(244, 244, 240, 0.4); /* Un grigio/bianco molto sfumato e discreto */
     font-weight: 300;
 }
+/* BARRA DI NAVIGAZIONE IN ALTO */
+.navbar {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 1000;
+}
+
+/* LINK DEL MENU PRINCIPALE */
+.navbar a, 
+.dropbtn {
+    color: #f4f4f0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover, 
+.dropbtn:hover {
+    opacity: 1;
+}
+
+/* STRUTTURA DEL MENU A TENDINA */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* CONTENITORE NASCOSTO */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(13, 13, 13, 0.95);
+    min-width: 150px;
+    padding: 12px 0;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* LINK INTERNI ALLA TENDINA (HERITAGE & TERROIR) */
+.dropdown-content a {
+    color: #cccccc;
+    padding: 8px 16px;
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.dropdown-content a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* MOSTRA LA TENDINA QUANDO CI PASSI SOPRA CON IL MOUSE */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
