@@ -1,96 +1,46 @@
-/* RESET E VARIABILI DI LUSSO */
+/* =========================================
+   ARCANTIS ARCHIVE
+   MAIN STYLESHEET
+   ========================================= */
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* VARIABLES */
 :root {
-    --bg-color: #0D0D0D;      /* Nero Obsidian opaco */
-    --text-color: #F4F4F0;    /* Bianco Calce / Off-White */
-    --accent-gold: #C5A059;   /* Oro Antico Opaco */
+    --bg-color: #0D0D0D;
+    --text-color: #F4F4F0;
+    --accent-gold: #C5A059;
+}
+
+/* =========================================
+   BASE
+   ========================================= */
+
+html {
+    background-color: var(--bg-color);
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* LAYOUT HERO */
-.hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    max-width: 600px;
-}
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
-/* LOGO */
-.brand-logo {
-    width: 180px; /* Regola la grandezza del logo sul sito */
-    height: auto;
-    display: block;
-}
-
-/* TAGLINE EDITORIALE */
-.tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: rgba(244, 244, 240, 0.7);
-    font-style: italic;
-}
-
-/* BADGE STATUS */
-.status-badge {
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--accent-gold);
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
-}
-/* STILE FOOTER */
-.site-footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-.site-footer p {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(244, 244, 240, 0.4); /* Un grigio/bianco molto sfumato e discreto */
-    font-weight: 300;
-}
-/* BARRA DI NAVIGAZIONE IN ALTO */
 .navbar {
     position: fixed;
     top: 30px;
@@ -100,14 +50,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    z-index: 9999;
+    z-index: 9999; /* porta il menu sopra a tutto!*/
     pointer-events: auto;
 }
 
-/* LINK DEL MENU PRINCIPALE */
-.navbar a, 
+.navbar a,
 .dropbtn {
-    color: #f4f4f0;
+    color: var(--text-color);
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -118,12 +67,13 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.navbar a:hover, 
+.navbar a:hover,
 .dropbtn:hover {
     opacity: 1;
 }
 
-/* STRUTTURA DEL MENU A TENDINA */
+/* DROPDOWN */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -131,7 +81,6 @@ body {
     margin-bottom: -15px;
 }
 
-/* CONTENITORE NASCOSTO */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -147,30 +96,116 @@ body {
     z-index: 10000;
 }
 
-/* LINK INTERNI ALLA TENDINA (HERITAGE & TERROIR) */
 .dropdown-content a {
     color: #e0e0e0;
     padding: 12px 20px;
     display: block;
     font-size: 0.75rem;
     letter-spacing: 2px;
-    text-decoration: nowrap;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* MOSTRA LA TENDINA QUANDO CI PASSI SOPRA CON IL MOUSE */
+/* DESKTOP DROPDOWN */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* STILI PAGINE INTERNE (HERITAGE & TERROIR) */
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.hero-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 80px 20px;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 180px;
+    max-width: 60vw;
+    height: auto;
+    display: block;
+}
+
+/* TAGLINE */
+
+.tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    color: rgba(244, 244, 240, 0.7);
+    font-style: italic;
+    max-width: 90vw;
+}
+
+/* STATUS */
+
+.status-badge {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    max-width: 90vw;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* =========================================
+   INTERNAL PAGES
+   HERITAGE / TERROIR
+   ========================================= */
 
 .page-container {
+    width: 100%;
     min-height: 100vh;
-    padding: 140px 20px 80px 20px;
+    padding: 140px 20px 80px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -196,7 +231,7 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    color: #f4f4f0;
+    color: var(--text-color);
 }
 
 .page-subtitle {
@@ -209,10 +244,13 @@ body {
     line-height: 1.6;
 }
 
-/* GRIGLIA ARCHIVIO */
+/* =========================================
+   ARCHIVE GRID
+   ========================================= */
+
 .archive-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     margin-top: 40px;
 }
@@ -221,6 +259,7 @@ body {
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    min-width: 0;
 }
 
 .archive-card:hover {
@@ -261,7 +300,7 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 12px;
-    color: #f4f4f0;
+    color: var(--text-color);
 }
 
 .card-content p {
@@ -270,4 +309,132 @@ body {
     line-height: 1.6;
     color: rgba(244, 244, 240, 0.6);
     font-weight: 300;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px 20px;
+}
+
+.site-footer p {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(244, 244, 240, 0.4);
+    font-weight: 300;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        top: 22px;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .navbar a,
+    .dropbtn {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .dropdown-content {
+        min-width: 145px;
+    }
+
+    .dropdown-content a {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        padding: 11px 15px;
+    }
+
+    /* HOME */
+
+    .hero-container {
+        min-height: 100dvh;
+        padding: 80px 20px;
+        gap: 22px;
+    }
+
+    .brand-logo {
+        width: min(180px, 55vw);
+    }
+
+    .tagline {
+        max-width: 90vw;
+        font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+
+    .status-badge {
+        max-width: 90vw;
+        font-size: 0.65rem;
+        letter-spacing: 2.5px;
+    }
+
+    /* INTERNAL PAGES */
+
+    .page-container {
+        min-height: 100vh;
+        padding: 110px 20px 60px;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .section-label {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+    }
+
+    .page-title {
+        font-size: 2.3rem;
+        letter-spacing: 1px;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* GRID */
+
+    .archive-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .card-image-placeholder {
+        height: 190px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 30px 20px 20px;
+    }
+
+    .site-footer p {
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+    }
 }
