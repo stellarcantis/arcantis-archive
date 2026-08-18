@@ -438,3 +438,192 @@ body {
         line-height: 1.5;
     }
 }
+/* ==========================================
+   STILI PAGINA EXHIBITIONS (AGENDA CULTURALE)
+   ========================================== */
+
+/* Contenitore della lista mostre */
+.exhibitions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 850px;
+    margin: 40px auto 0 auto;
+}
+
+/* Singola scheda della mostra */
+.exhibition-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.exhibition-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Blocco data (A sinistra su PC) */
+.exhibition-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 30px;
+    min-width: 120px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.exhibition-date span {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: rgba(244, 244, 240, 0.4);
+    text-transform: uppercase;
+}
+
+.exhibition-date strong {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #f4f4f0;
+    margin-top: 4px;
+}
+
+/* Blocco testi della mostra */
+.exhibition-location {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(244, 244, 240, 0.5);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.exhibition-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #f4f4f0;
+    margin-bottom: 8px;
+}
+
+.exhibition-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(244, 244, 240, 0.65);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+
+/* ==========================================
+   OTTIMIZZAZIONE MOBILE PER EXHIBITIONS
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* Su smartphone la scheda da orizzontale diventa verticale */
+    .exhibition-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    /* La data non ha più il bordo a destra ma sotto */
+    .exhibition-date {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 0;
+        padding-bottom: 12px;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .exhibition-info h3 {
+        font-size: 1.3rem;
+    }
+}
+/* =======================================================
+   ELIMINAZIONE VELO BIANCO SU MENU ARCHIVIO & DROPDOWN
+   ======================================================= */
+
+/* 1. Azzera sfondi e filtri su tutti gli stati del contenitore e del bottone */
+.dropdown,
+.dropdown:hover,
+.dropdown:focus,
+.dropdown:focus-within,
+.dropbtn,
+.dropbtn:hover,
+.dropbtn:focus,
+.dropbtn:focus-visible,
+.dropbtn:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. Disattiva eventuali pseudo-elementi (overlay/velature) */
+.dropdown::before,
+.dropdown::after,
+.dropbtn::before,
+.dropbtn::after,
+.dropdown-content::before,
+.dropdown-content::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* 3. Forza il blocco della tendina a uno sfondo scuro solido (senza veli) */
+.dropdown-content,
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    background-color: #141414 !important;
+    background: #141414 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7) !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 4. Garantisce sfondo scuro solido su tutte le voci interne */
+.dropdown-content a,
+.dropdown-content a:link,
+.dropdown-content a:visited,
+.dropdown-content a:focus,
+.dropdown-content a:active {
+    background-color: #141414 !important;
+    background: #141414 !important;
+    color: rgba(244, 244, 240, 0.85) !important;
+    outline: none !important;
+}
+
+/* 5. Unica velatura consentita: leggero chiarore al passaggio del mouse sul singolo link */
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #f4f4f0 !important;
+}
+/* ELIMINAZIONE BORDINO BIANCO DI SELEZIONE */
+.dropbtn,
+.dropbtn:focus,
+.dropbtn:focus-visible,
+.dropbtn:active,
+.dropbtn:hover,
+.dropdown:focus,
+.dropdown:focus-within {
+    border: none !important;
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+}
