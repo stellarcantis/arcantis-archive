@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintassi della luce | Arcantis Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <span class="dropbtn">Archivio ▾</span>
+            <div class="dropdown-content">
+                <a href="heritage.html">Heritage</a>
+                <a href="terroir.html">Terroir</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENUTO SAGGIO -->
+    <main class="page-container essay-container">
+        
+        <header class="page-header">
+            <span class="section-label">Comparative Essay / Estratto</span>
+            <h1 class="page-title">La sintassi della luce. Vermeer e il blanc de blancs</h1>
+            <p class="page-subtitle"><em>Vermeer e lo chardonnay in purezza</em></p>
+        </header>
+
+        <!-- IMMAGINE HERO -->
+        <div class="essay-hero-image">
+            <img src="foto.jpg" alt="Antonio Biasiucci e Taurasi DOCG">
+        </div>
+
+        <!-- ESTRATTO DEL SAGGIO -->
+        <article class="essay-body">
+            
+            <p class="essay-lead">
+                L’opera di Antonio Biasiucci non documenta la realtà: la scarnifica. Nel rigore del bianco e nero, gli elementi viscerali della Campania — i panni, i pani, i vulcani, i crani — vengono spogliati del loro contesto aneddotico per assurgere a simboli atemporali, sacri e primordiali.
+            </p>
+
+            <p>
+                Questa medesima urgenza di sottrazione appartiene alla natura del <strong>Taurasi DOCG</strong>. Nato sulle altitudini dell’Irpinia da uve Aglianico coltivate su matrici vulcaniche e calcaree, il Taurasi non cerca la levigatezza o la piacevolezza immediata. È un vino austero, scuro, segnato da una spina acida e da tannini monolitici che richiedono tempo e silenzio per disvelarsi.
+            </p>
+
+            <blockquote>
+                «Sottrarre il superfluo significa far emergere la struttura ossea della materia, sia essa la grana fotografica di una stampa ai sali d'argento o la trama minerale di un grande vitigno autoctono.»
+            </blockquote>
+
+            <p>
+                Nella serie <em>Archetipi</em>, il contrasto netto tra la luce abbagliante e l'oscurità cosmica rispecchia la dualità organolettica del Taurasi: un frutto denso ma scuro (amarena, prugna selvatica) solcato da note di cenere, grafite e radice di liquirizia. La fotografia di Biasiucci e la vinificazione del Taurasi condividono lo stesso rituale: la trasformazione della terra attraverso il fuoco e l'attesa.
+            </p>
+
+            <!-- SCHEDA SINTETICA DI AFFINITÀ -->
+            <div class="pairing-spec-sheet">
+                <h3>Scheda di Affinità Curatoriale</h3>
+                <ul>
+                    <li><strong>Opera di Riferimento:</strong> Antonio Biasiucci, serie <em>Archetipi</em> (Stampe ai sali d'argento).</li>
+                    <li><strong>Territorio / Denominazione:</strong> Irpinia, Taurasi DOCG (Aglianico 100%).</li>
+                    <li><strong>Matrice Comune:</strong> Tensioni vulcaniche, austerità espressiva, permanenza nel tempo.</li>
+                </ul>
+            </div>
+
+            <!-- BOX RICHIESTA SAGGIO COMPLETO VIA MAIL -->
+            <div class="essay-request-box">
+                <div class="request-info">
+                    <span class="request-title">Richiedi il Saggio Critico Integrale</span>
+                    <p class="request-desc">
+                        La monografia completa comprende l'analisi iconografica dettagliata delle opere di Biasiucci, le schede analitiche di tre annate storiche di Taurasi DOCG e il saggio teorico sul concetto di "Terroir Visivo". La documentazione è inviata riservatamente via e-mail.
+                    </p>
+                </div>
+                <a href="mailto:arcantis.archive@proton.me?subject=Richiesta%20Saggio%20Integrale:%20Biasiucci%20-%20Taurasi&body=Gentile%20Arcantis%20Archive,%20desidero%20ricevere%20il%20saggio%20critico%20integrale%20su%20Antonio%20Biasiucci%20e%20il%20Taurasi%20DOCG." class="request-btn">
+                    Richiedi il Saggio Completo via Mail ✉
+                </a>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Arcantis Archive. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>

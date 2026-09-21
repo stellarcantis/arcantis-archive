@@ -632,3 +632,94 @@ body {
     outline-offset: 0 !important;
     box-shadow: none !important;
 }
+/* Stili specifici per la pagina dell'Estratto del Saggio */
+.essay-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-title-link, .card-image-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.read-more-btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-color, #f4f4f0);
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.read-more-btn:hover {
+    opacity: 0.7;
+}
+
+.essay-hero-image {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.essay-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.essay-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(244, 244, 240, 0.85);
+}
+
+.essay-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: rgba(244, 244, 240, 0.95);
+}
+
+.essay-body blockquote {
+    border-left: 2px solid rgba(244, 244, 240, 0.3);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: rgba(244, 244, 240, 0.9);
+}
+
+.pairing-spec-sheet {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.pairing-spec-sheet h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pairing-spec-sheet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.pairing-spec-sheet li {
+    margin-bottom: 0.5rem;
+}
