@@ -15,7 +15,7 @@
     <!-- MENU DI NAVIGAZIONE CON TENDINA -->
     <nav class="navbar">
         <a href="index.html">Home</a>
-        
+       
         <div class="dropdown">
             <span class="dropbtn">Archivio ▾</span>
             <div class="dropdown-content">
@@ -38,17 +38,32 @@
         <!-- GRIGLIA D'ESEMPIO PER I CONTENUTI/ARTICOLI -->
         <section class="archive-grid">
             
-            <article class="archive-card">
-                <div class="card-image">
-                    <img src="vermeerblancs.png"> 
-                </div> 
-                
-                <div class="card-content">
-                    <span class="card-tag">Art & Culture</span>
-                    <h2>La sintassi della luce: Jan Vermeer e la purezza minerologica del Blanc de Blancs</h2>
-                    <p>Il pointillè di Jan Vermeer e la dinamica molecolare del perlage nello Chardonnay in purezza.</p>
-                </div>
-            </article>
+           <article class="archive-card">
+    
+    <!-- 1. LINK SULL'IMMAGINE -->
+    <a href="saggiovermeerblancs.html" class="card-image-link">
+        <div class="card-image">
+            <img src="vermeerblancs.png" alt="Jan Vermeer e Blanc de Blancs"> 
+        </div> 
+    </a>
+    
+    <div class="card-content">
+        <span class="card-tag">Art & Culture</span>
+        
+        <!-- 2. LINK SUL TITOLO -->
+        <h2>
+            <a href="saggiovermeerblancs.html" class="card-title-link">La sintassi della luce: Jan Vermeer e la purezza minerologica del Blanc de Blancs</a>
+        </h2>
+        
+        <p>Il pointillè di Jan Vermeer e la dinamica molecolare del perlage nello Chardonnay in purezza.</p>
+        
+        <!-- 3. PULSANTE PER LEGGERE L'ESTRATTO -->
+        <a href="saggiovermeerblancs.html" class="request-btn">
+            Leggi l'estratto →
+        </a>
+    </div>
+
+</article>
 
             <article class="archive-card">
                 <div class="card-image">
